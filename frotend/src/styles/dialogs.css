@@ -1,0 +1,108 @@
+.dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 40, 84, 0.34);
+  backdrop-filter: blur(10px);
+  display: grid;
+  place-items: center;
+  padding: var(--space-8);
+  z-index: 40;
+}
+
+/* AuthDialog 弹窗过渡动画 (fade-dialog) */
+.fade-dialog-enter-active,
+.fade-dialog-leave-active {
+  transition: opacity var(--duration-normal) ease;
+}
+
+.fade-dialog-enter-from,
+.fade-dialog-leave-to {
+  opacity: 0;
+}
+
+.fade-dialog-enter-active .dialog-card {
+  transition: transform var(--duration-normal) var(--ease-standard), opacity var(--duration-normal) ease;
+}
+
+.fade-dialog-leave-active .dialog-card {
+  transition: transform var(--duration-normal) var(--ease-standard), opacity var(--duration-normal) ease;
+}
+
+.fade-dialog-enter-from .dialog-card {
+  opacity: 0;
+  transform: scale(0.92) translateY(20px);
+}
+
+.fade-dialog-leave-to .dialog-card {
+  opacity: 0;
+  transform: scale(0.96) translateY(-10px);
+}
+
+.dialog-card {
+  width: min(520px, 100%);
+  display: grid;
+  gap: var(--space-5);
+  padding: 24px;
+  border-radius: var(--radius-4xl);
+  background: var(--gradient-surface-overlay);
+  border: 1px solid rgba(40, 103, 198, 0.18);
+  box-shadow: var(--shadow-dialog);
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.dialog-header h2 {
+  margin: 8px 0 0;
+  font-size: 1.5rem;
+}
+
+.dialog-copy {
+  margin: 0;
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+.compact-button {
+  padding-inline: 12px;
+}
+
+.info-message {
+  margin: 0;
+  color: var(--primary-deep);
+}
+
+.save-feedback-banner {
+  margin: 0;
+  padding: 12px 16px;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(38, 119, 255, 0.14);
+  background: linear-gradient(135deg, rgba(244, 249, 255, 0.98), rgba(229, 240, 255, 0.94));
+  color: var(--primary-deep);
+  box-shadow: var(--shadow-soft);
+}
+
+.save-feedback-banner[data-tone="pending"] {
+  border-color: rgba(38, 119, 255, 0.18);
+  background: linear-gradient(135deg, rgba(245, 250, 255, 0.98), rgba(232, 242, 255, 0.94));
+}
+
+.save-feedback-banner[data-tone="success"] {
+  border-color: rgba(50, 134, 86, 0.16);
+  background: linear-gradient(135deg, rgba(244, 251, 246, 0.98), rgba(227, 243, 232, 0.94));
+  color: #1f6a44;
+}
+
+.save-feedback-banner[data-tone="error"] {
+  border-color: rgba(186, 79, 54, 0.18);
+  background: linear-gradient(135deg, rgba(255, 245, 243, 0.98), rgba(255, 231, 226, 0.94));
+  color: #9a3d2d;
+}
+
+.danger-text {
+  color: var(--danger);
+}

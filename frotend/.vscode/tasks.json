@@ -1,0 +1,10 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Update",
+			"type": "shell",
+			"command": "node /Users/mac/workspace/trip-planer-agent/frotend/update.js"
+		}
+	]
+}

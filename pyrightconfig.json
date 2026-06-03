@@ -1,0 +1,11 @@
+{
+  "include": [
+    "backend",
+    "frotend"
+  ],
+  "extraPaths": [
+    "backend"
+  ],
+  "venvPath": "backend",
+  "venv": ".venv"
+}

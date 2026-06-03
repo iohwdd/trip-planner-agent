@@ -1,0 +1,112 @@
+:where(
+  .primary-button,
+  .secondary-button,
+  .ghost-button,
+  .result-tab,
+  .route-day-chip,
+  .suggestion-chip,
+  .nav-card
+) {
+  transition:
+    transform var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard),
+    background var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard),
+    opacity var(--duration-fast) var(--ease-standard);
+  -webkit-tap-highlight-color: transparent;
+}
+
+:where(
+  .panel,
+  .composer-panel,
+  .chat-workspace,
+  .hero-card,
+  .info-card,
+  .timeline-card,
+  .timeline-summary-card,
+  .source-panel
+) {
+  transition:
+    border-color var(--duration-normal) var(--ease-standard),
+    box-shadow var(--duration-normal) var(--ease-standard),
+    background var(--duration-normal) var(--ease-standard);
+}
+
+:where(
+  .primary-button,
+  .secondary-button,
+  .ghost-button,
+  .result-tab,
+  .route-day-chip,
+  .suggestion-chip
+):not(:disabled):hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* 增加触按阻尼弹簧感：按下时缩放比例，结合 tokens 中弹簧贝塞尔曲线产生生动弹跳体验 */
+:where(
+  .primary-button,
+  .secondary-button,
+  .ghost-button,
+  .result-tab,
+  .route-day-chip,
+  .suggestion-chip,
+  .nav-card
+):not(:disabled):active {
+  transform: translateY(0) scale(0.95);
+  transition-duration: var(--duration-fast);
+}
+
+.primary-button:not(:disabled):hover {
+  box-shadow: var(--shadow-primary-hover);
+}
+
+.secondary-button:not(:disabled):hover {
+  background: rgba(208, 226, 255, 0.96);
+}
+
+.ghost-button:not(:disabled):hover {
+  background: rgba(236, 244, 255, 0.96);
+  border-color: rgba(52, 104, 196, 0.22);
+}
+
+.result-tab:not(:disabled):hover,
+.route-day-chip:not(:disabled):hover,
+.suggestion-chip:not(:disabled):hover {
+  background: var(--gradient-primary-soft);
+  border-color: rgba(32, 93, 202, 0.22);
+  color: var(--primary-deep);
+}
+
+:where(
+  .primary-button,
+  .secondary-button,
+  .ghost-button,
+  .result-tab,
+  .route-day-chip,
+  .suggestion-chip,
+  .nav-card
+):focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-surface-focus);
+}
+
+:where(
+  .primary-button,
+  .secondary-button,
+  .ghost-button,
+  .result-tab,
+  .route-day-chip,
+  .suggestion-chip
+):disabled {
+  opacity: 0.56;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+:where(.panel, .composer-panel, .chat-workspace):focus-within {
+  border-color: rgba(32, 93, 202, 0.24);
+  box-shadow: var(--shadow-surface-focus);
+}

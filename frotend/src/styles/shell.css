@@ -1,0 +1,81 @@
+.app-header-minimal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+}
+
+.app-brand {
+  display: grid;
+  gap: 4px;
+}
+
+.app-brand strong {
+  font-size: 1.08rem;
+  letter-spacing: -0.02em;
+  color: var(--text-strong);
+}
+
+.user-console-minimal,
+.user-menu-minimal {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.user-console-minimal {
+  margin-left: auto;
+}
+
+.user-menu-minimal .user-summary {
+  display: grid;
+  gap: 2px;
+  text-align: right;
+}
+
+.user-menu-minimal .user-summary span {
+  color: var(--text-soft);
+  font-size: 0.86rem;
+}
+
+.app-shell-product .app-sidebar {
+  gap: var(--space-6);
+}
+
+.app-shell-product .sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.app-shell-product .nav-card {
+  grid-template-columns: 28px minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-5) var(--space-6);
+}
+
+.app-shell-product .nav-card .nav-label {
+  color: var(--text-strong);
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding-left: 4px;
+}
+
+.app-shell-product .app-sidebar[data-collapsed="true"] .nav-card {
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.app-shell-product .app-sidebar[data-collapsed="true"] .nav-card .nav-label {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 960px) {
+  .app-header-minimal {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

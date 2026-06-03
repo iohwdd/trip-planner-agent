@@ -1,0 +1,273 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: var(--text-strong);
+  font-family: "Avenir Next", "PingFang SC", "Microsoft YaHei", sans-serif;
+  /* 回归淡蓝色系旅行度假背景，增加玻璃拟态通透感 */
+  background:
+    radial-gradient(circle at 10% 0%, rgba(74, 180, 255, 0.2) 0%, transparent 40%),  /* 浅湖蓝 */
+    radial-gradient(circle at 90% 20%, rgba(30, 136, 229, 0.15) 0%, transparent 35%), /* 深海蓝 */
+    radial-gradient(circle at 50% 100%, rgba(0, 242, 254, 0.12) 0%, transparent 45%),  /* 碧蓝波光 */
+    linear-gradient(135deg, #f2f9ff 0%, #e6f4ff 50%, #d9efff 100%); /* 清爽的浅蓝底色 */
+  background-attachment: fixed;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: var(--space-7);
+  padding: var(--space-7);
+}
+
+.app-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-7);
+  padding: 20px 24px;
+  border-radius: var(--radius-3xl);
+  border: 1px solid rgba(57, 112, 201, 0.14);
+  background: var(--gradient-surface);
+  box-shadow: var(--shadow);
+}
+
+.app-header-compact {
+  padding-block: 18px;
+}
+
+.user-console,
+.user-menu,
+.user-summary,
+.app-shell-note,
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.user-console,
+.sidebar-header {
+  justify-content: space-between;
+}
+
+.user-console {
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+}
+
+.user-menu {
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+
+.user-summary {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.user-summary strong,
+.app-shell-note strong,
+.sidebar-header strong {
+  color: var(--text-strong);
+}
+
+.user-summary span,
+.app-shell-note p:last-child,
+.sidebar-note p:last-child {
+  color: var(--text-soft);
+}
+
+.route-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-pill);
+  background: rgba(32, 95, 208, 0.1);
+  color: var(--primary-deep);
+  font-weight: 600;
+}
+
+.app-shell-note {
+  max-width: 520px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.app-layout {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 272px minmax(0, 1fr);
+  gap: var(--space-7);
+}
+
+.app-layout[data-sidebar-collapsed="true"] {
+  grid-template-columns: 112px minmax(0, 1fr);
+}
+
+.app-sidebar {
+  min-height: 0;
+  display: grid;
+  align-content: start;
+  gap: var(--space-6);
+  padding: var(--space-7);
+  border-radius: var(--radius-3xl);
+  border: 1px solid rgba(57, 112, 201, 0.14);
+  background: var(--gradient-surface-alt);
+  /* 毛玻璃（Frosted glass）特效 */
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--shadow);
+}
+
+.app-sidebar[data-collapsed="true"] {
+  padding: var(--space-5) var(--space-3);
+  justify-items: stretch;
+}
+
+.app-sidebar[data-collapsed="true"] .sidebar-header {
+  display: grid;
+  justify-items: stretch;
+  gap: var(--space-3);
+}
+
+.app-sidebar[data-collapsed="true"] .sidebar-header > div {
+  display: none;
+}
+
+.app-sidebar[data-collapsed="true"] .sidebar-header .ghost-button {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 8px;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: 0.82rem;
+}
+
+.sidebar-header {
+  align-items: flex-start;
+}
+
+.sidebar-header > div {
+  display: grid;
+  gap: 4px;
+}
+
+.sidebar-nav {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.app-sidebar[data-collapsed="true"] .sidebar-nav {
+  justify-items: stretch;
+}
+
+.nav-card {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 10px 12px;
+  align-items: center;
+  padding: var(--space-5);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(57, 112, 201, 0.12);
+  background: rgba(255, 255, 255, 0.82);
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.nav-card-glyph {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-sm);
+  background: rgba(32, 95, 208, 0.1);
+  color: var(--primary-deep);
+  font-weight: 700;
+}
+
+.nav-card.is-active {
+  box-shadow: var(--shadow-soft);
+}
+
+.app-sidebar[data-collapsed="true"] .nav-card {
+  width: 100%;
+  padding: 12px 8px 14px;
+  gap: var(--space-3);
+  border-radius: var(--radius-lg);
+}
+
+.app-sidebar[data-collapsed="true"] .nav-card strong {
+  font-size: 0.88rem;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.app-sidebar[data-collapsed="true"] .nav-card span:last-child {
+  display: none;
+}
+
+.app-content {
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+}
+
+.page-shell,
+.workspace-page {
+  min-width: 0;
+}
+
+@media (max-width: 1100px) {
+  .app-header,
+  .app-layout,
+  .app-layout[data-sidebar-collapsed="true"] {
+    grid-template-columns: 1fr;
+  }
+
+  .app-header {
+    flex-direction: column;
+  }
+
+  .app-sidebar[data-collapsed="true"] {
+    padding-inline: 18px;
+  }
+
+  .nav-card,
+  .nav-card[data-collapsed="true"] {
+    grid-template-columns: 40px minmax(0, 1fr);
+    justify-items: start;
+    text-align: left;
+  }
+
+  .nav-card[data-collapsed="true"] span:last-child {
+    display: block;
+  }
+}

@@ -1,0 +1,61 @@
+.panel-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: var(--space-6);
+}
+
+.panel-header h2 {
+  margin: 6px 0 0;
+  font-size: 1.5rem;
+}
+
+.timeline-card,
+.hero-card,
+.info-card,
+.source-panel {
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--border-strong);
+  background: var(--bg-surface-elevated);
+  padding: var(--space-7);
+  box-shadow: 0 8px 32px rgba(138, 154, 134, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.timeline-card header,
+.hero-card {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.hero-card-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.hero-card-stack,
+.source-panel-collapsed {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.hero-card h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.general-answer-card {
+  margin-top: 18px;
+  background: linear-gradient(160deg, rgba(238, 246, 255, 0.96), rgba(226, 239, 255, 0.76));
+}
+
+.source-panel {
+  margin-top: 18px;
+}

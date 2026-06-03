@@ -1,0 +1,11 @@
+Django<6.0,>=5.1
+djangorestframework<4.0,>=3.15
+pydantic<3.0,>=2.8
+requests<3.0,>=2.32
+langchain<0.4,>=0.3
+langchain-openai<0.3,>=0.2
+langgraph<0.3,>=0.2
+python-dotenv<2.0,>=1.0
+
+[dev]
+pytest<9.0,>=8.0

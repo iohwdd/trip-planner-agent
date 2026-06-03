@@ -1,0 +1,232 @@
+.workspace-chat,
+.workspace-context-column,
+.chat-workspace,
+.result-panel,
+.timeline-panel,
+.hero-card,
+.info-card,
+.source-panel,
+.workspace-stage-card,
+.result-stage-card,
+.timeline-card,
+.timeline-summary-card,
+.change-summary-card,
+.route-day-summary-card,
+.route-stop-card,
+.alt-card,
+.leg-card,
+.day-card {
+  min-width: 0;
+}
+
+.hero-card,
+.info-card,
+.source-panel,
+.timeline-summary-card,
+.timeline-card,
+.route-day-summary-card,
+.change-summary-card,
+.result-stage-card,
+.workspace-stage-card,
+.route-stop-card,
+.alt-card,
+.leg-card,
+.day-card {
+  display: grid;
+  gap: var(--space-4);
+  align-content: start;
+}
+
+.hero-card > *,
+.info-card > *,
+.source-panel > *,
+.timeline-summary-card > *,
+.timeline-card > *,
+.change-summary-card > *,
+.result-stage-card > *,
+.workspace-stage-card > * {
+  min-width: 0;
+}
+
+.hero-card h3,
+.info-card h3,
+.timeline-card strong,
+.route-overview-header h3,
+.route-day-summary-card strong,
+.route-visual-card strong,
+.change-summary-card strong,
+.workspace-stage-card strong,
+.result-stage-card strong {
+  margin: 0;
+  line-height: 1.35;
+}
+
+.hero-card p,
+.info-card p,
+.timeline-card p,
+.route-day-summary-card p,
+.route-visual-card p,
+.route-visual-leg span,
+.workspace-stage-card p,
+.result-stage-card p,
+.change-summary-card p,
+.route-stop-card p,
+.day-card p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--space-6);
+  margin-top: 0;
+  align-items: start;
+}
+
+.result-grid > * {
+  grid-column: span 6;
+}
+
+.result-grid-single,
+.result-grid-single > *,
+.route-map-preview-card,
+.route-overview-board,
+.route-map-card,
+.general-answer-card,
+.clarification-bridge-card,
+.result-disclosure-card,
+.source-panel,
+.info-card:has(.change-summary-grid) {
+  grid-column: 1 / -1;
+}
+
+.route-overview-header {
+  gap: var(--space-6);
+}
+
+.route-map-preview-card,
+.route-overview-board,
+.route-map-card,
+.general-answer-card,
+.clarification-bridge-card,
+.result-disclosure-card,
+.source-panel {
+  padding: var(--space-8);
+}
+
+.route-map-preview,
+.route-map-card,
+.route-overview-board,
+.result-disclosure-body,
+.change-summary-grid,
+.route-day-summary-grid,
+.budget-progress-list,
+.warning-list {
+  min-width: 0;
+}
+
+.route-day-summary-grid,
+.change-summary-grid,
+.result-stage-grid {
+  align-items: stretch;
+}
+
+.route-day-summary-card,
+.change-summary-card,
+.result-stage-card,
+.workspace-stage-card {
+  min-height: 100%;
+}
+
+.timeline-panel {
+  overflow: visible;
+}
+
+.timeline-panel[data-collapsed="true"],
+.timeline-panel:not([data-collapsed="true"]) {
+  max-height: none;
+}
+
+.timeline {
+  gap: var(--space-6);
+}
+
+.timeline-card {
+  background: var(--bg-surface-elevated-strong);
+}
+
+.timeline-summary-card {
+  background: var(--gradient-surface-summary);
+}
+
+.chat-log {
+  padding-right: 2px;
+}
+
+.message-card {
+  width: min(100%, 760px);
+}
+
+.result-empty,
+.timeline-empty,
+.chat-empty {
+  background: var(--gradient-surface-empty);
+  border: 1px dashed rgba(65, 118, 205, 0.18);
+}
+
+.source-panel-collapsed {
+  margin-top: 0;
+}
+
+@media (max-width: 1280px) {
+  .result-grid > * {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 960px) {
+  .workspace-context-rail,
+  .result-stage-grid,
+  .route-day-summary-grid,
+  .change-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .workspace-stage-hero,
+  .chat-workspace,
+  .composer-panel,
+  .route-map-preview-card,
+  .route-overview-board,
+  .route-map-card,
+  .general-answer-card,
+.clarification-bridge-card,
+  .result-disclosure-card,
+  .source-panel,
+  .info-card,
+  .hero-card,
+  .timeline-card,
+  .timeline-summary-card {
+    padding: var(--space-7);
+    border-radius: var(--radius-xl);
+  }
+
+  .route-visual-node {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: var(--space-4);
+  }
+
+  .route-visual-marker,
+  .route-visual-marker span {
+    width: 28px;
+    height: 28px;
+  }
+
+  .route-visual-marker::after {
+    top: 34px;
+  }
+
+  .message-card {
+    max-width: 100%;
+  }
+}

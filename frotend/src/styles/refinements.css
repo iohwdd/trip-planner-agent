@@ -1,0 +1,52 @@
+.assistant-layout,
+.workbench-structured-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: var(--space-8);
+}
+
+.assistant-layout {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.workbench-page .workspace-chat {
+  min-width: 0;
+}
+
+.workspace-stage-hero {
+  gap: var(--space-7);
+}
+
+.workspace-actions-popover {
+  width: min(280px, calc(100vw - 32px));
+  max-width: calc(100vw - 32px);
+}
+
+@media (max-width: 980px) {
+  .workbench-structured-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 960px) {
+  .chat-workspace {
+    height: auto;
+    max-height: none;
+    min-height: min(70vh, 760px);
+  }
+
+  .workspace-context-column .result-panel,
+  .workspace-context-column .timeline-panel {
+    height: auto;
+    max-height: none;
+  }
+
+  .workspace-toolbar-left {
+    width: 100%;
+  }
+
+  .workspace-actions-popover {
+    left: auto;
+    right: 0;
+  }
+}

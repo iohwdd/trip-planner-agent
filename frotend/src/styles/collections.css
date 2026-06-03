@@ -1,0 +1,74 @@
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6);
+  align-content: start;
+}
+
+.collection-card,
+.collection-state {
+  padding: var(--space-7);
+  border-radius: var(--radius-3xl);
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
+.collection-card {
+  display: grid;
+  gap: var(--space-4);
+  align-content: start;
+}
+
+.collection-card h2 {
+  margin: 8px 0 12px;
+  font-size: 1.3rem;
+}
+
+.collection-copy {
+  margin: 0;
+  color: var(--text-soft);
+  line-height: 1.55;
+}
+
+.summary-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: 12px;
+}
+
+.card-actions,
+.dialog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: 14px;
+}
+
+.collection-state {
+  display: grid;
+  gap: var(--space-4);
+  color: var(--text-soft);
+}
+
+.auth-callout {
+  justify-items: start;
+}
+
+.detail-layout {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.38fr) minmax(0, 0.62fr);
+  gap: var(--space-7);
+  min-height: 0;
+}
+
+.sticky-summary {
+  position: sticky;
+  top: 0;
+  align-self: start;
+}
+
+.profile-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}

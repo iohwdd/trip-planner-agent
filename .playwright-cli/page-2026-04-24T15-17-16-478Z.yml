@@ -1,0 +1,157 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7]
+      - generic [ref=e10]:
+        - paragraph [ref=e11]: Travel Planner
+        - strong [ref=e12]: Trip Agent
+    - button "账号登录" [ref=e14] [cursor=pointer]
+  - generic [ref=e15]:
+    - complementary [ref=e16]:
+      - generic [ref=e17]:
+        - strong [ref=e18]: 导 航
+        - button "收起导" [ref=e19] [cursor=pointer]:
+          - img [ref=e20]
+      - navigation "主导航" [ref=e22]:
+        - link "智能助手" [ref=e23] [cursor=pointer]:
+          - /url: /
+          - img [ref=e25]
+          - generic [ref=e29]: 智能助手
+        - link "工作台" [active] [ref=e31] [cursor=pointer]:
+          - /url: /workbench
+          - img [ref=e33]
+          - generic [ref=e35]: 工作台
+        - link "会话" [ref=e36] [cursor=pointer]:
+          - /url: /sessions
+          - img [ref=e38]
+          - generic [ref=e41]: 会话
+        - link "方案" [ref=e42] [cursor=pointer]:
+          - /url: /plans
+          - img [ref=e44]
+          - generic [ref=e46]: 方案
+      - generic [ref=e48]:
+        - img [ref=e50]
+        - generic [ref=e56]:
+          - generic [ref=e57]: 24°C
+          - generic [ref=e58]: 开启美好旅程
+    - main [ref=e96]:
+      - generic [ref=e98]:
+        - generic [ref=e100]:
+          - paragraph [ref=e101]: 流程工作台
+          - heading "填写这次旅行条件" [level=2] [ref=e102]
+          - paragraph [ref=e103]: 先定日期、人数和目的地，再通过标签快速补齐偏好，系统会自动推导天数并生成路线。
+        - generic [ref=e104]:
+          - generic [ref=e105]:
+            - generic [ref=e106]:
+              - heading "出行基础" [level=3] [ref=e107]
+              - paragraph [ref=e108]: 先把必要条件定下来，下面的路线节奏和资源筛选都会跟着联动。
+            - generic [ref=e109]:
+              - generic [ref=e110]:
+                - generic [ref=e111]:
+                  - text: 目的地
+                  - emphasis [ref=e112]: "*"
+                - combobox "目的地 *" [ref=e113]
+              - generic [ref=e114]:
+                - generic [ref=e115]: 出发城市
+                - combobox "出发城市" [ref=e116]
+              - generic [ref=e117]:
+                - generic [ref=e118]: 人数
+                - generic [ref=e119]:
+                  - button "人数 1 +" [disabled] [ref=e120]: "-"
+                  - spinbutton [ref=e121]: "1"
+                  - button "+" [ref=e122] [cursor=pointer]
+              - generic [ref=e123]:
+                - generic [ref=e124]: 预算
+                - spinbutton "预算" [ref=e125]
+              - generic [ref=e126]:
+                - generic [ref=e127]:
+                  - text: 出行日期
+                  - emphasis [ref=e128]: "*"
+                - generic [ref=e129]:
+                  - generic [ref=e130]:
+                    - generic [ref=e131]: 出发
+                    - textbox [ref=e132]
+                  - generic [ref=e133]: 至
+                  - generic [ref=e134]:
+                    - generic [ref=e135]: 返程
+                    - textbox [ref=e136]
+              - generic [ref=e137]:
+                - generic [ref=e138]: 天数
+                - generic [ref=e139]:
+                  - strong [ref=e140]: 待自动计算
+                  - generic [ref=e141]: 选择日期后自动生成
+          - generic [ref=e142]:
+            - generic [ref=e143]:
+              - generic [ref=e144]:
+                - heading "偏好与限制" [level=3] [ref=e145]
+                - paragraph [ref=e146]: 优先点选标签，输入框只留给你补充细节，不必每次都从头打字。
+              - button "给我灵感" [ref=e147] [cursor=pointer]
+            - generic [ref=e148]:
+              - generic [ref=e149]:
+                - generic [ref=e150]: 兴趣偏好
+                - generic [ref=e151]:
+                  - button "兴趣偏好 博物馆 亲子 夜景 自然风光 展览 美食打卡 轻松慢游" [ref=e152] [cursor=pointer]: 城市漫步
+                  - button "博物馆" [ref=e153] [cursor=pointer]
+                  - button "亲子" [ref=e154] [cursor=pointer]
+                  - button "夜景" [ref=e155] [cursor=pointer]
+                  - button "自然风光" [ref=e156] [cursor=pointer]
+                  - button "展览" [ref=e157] [cursor=pointer]
+                  - button "美食打卡" [ref=e158] [cursor=pointer]
+                  - button "轻松慢游" [ref=e159] [cursor=pointer]
+                - textbox "支持补充自定义兴趣，多个偏好用逗号分隔" [ref=e160]
+              - generic [ref=e161]:
+                - generic [ref=e162]: 交通偏好
+                - generic [ref=e163]:
+                  - button "交通偏好 少步行 打车优先 高铁往返 适合长辈 路线紧凑" [ref=e164] [cursor=pointer]: 地铁优先
+                  - button "少步行" [ref=e165] [cursor=pointer]
+                  - button "打车优先" [ref=e166] [cursor=pointer]
+                  - button "高铁往返" [ref=e167] [cursor=pointer]
+                  - button "适合长辈" [ref=e168] [cursor=pointer]
+                  - button "路线紧凑" [ref=e169] [cursor=pointer]
+                - textbox "例如：高铁去、返程打车、减少换乘" [ref=e170]
+              - generic [ref=e171]:
+                - generic [ref=e172]: 美食偏好
+                - generic [ref=e173]:
+                  - button "美食偏好 本地老店 米其林 咖啡馆 夜宵 清淡口味 适合家庭" [ref=e174] [cursor=pointer]: 特色小吃
+                  - button "本地老店" [ref=e175] [cursor=pointer]
+                  - button "米其林" [ref=e176] [cursor=pointer]
+                  - button "咖啡馆" [ref=e177] [cursor=pointer]
+                  - button "夜宵" [ref=e178] [cursor=pointer]
+                  - button "清淡口味" [ref=e179] [cursor=pointer]
+                  - button "适合家庭" [ref=e180] [cursor=pointer]
+                - textbox "例如：本帮菜、深夜食堂、无辣" [ref=e181]
+              - generic [ref=e182]:
+                - generic [ref=e183]: 酒店偏好
+                - generic [ref=e184]:
+                  - button "酒店偏好 安静休息 夜景 亲子友好 核心商圈 性价比优先" [ref=e185] [cursor=pointer]: 地铁方便
+                  - button "安静休息" [ref=e186] [cursor=pointer]
+                  - button "夜景" [ref=e187] [cursor=pointer]
+                  - button "亲子友好" [ref=e188] [cursor=pointer]
+                  - button "核心商圈" [ref=e189] [cursor=pointer]
+                  - button "性价比优先" [ref=e190] [cursor=pointer]
+                - textbox "例如：离景点近、适合家庭房" [ref=e191]
+              - generic [ref=e192]:
+                - generic [ref=e193]: 约束条件
+                - generic [ref=e194]:
+                  - button "约束条件 少折返 午后休息 避开排队 雨天可替换 预算克制" [ref=e195] [cursor=pointer]: 不赶行程
+                  - button "少折返" [ref=e196] [cursor=pointer]
+                  - button "午后休息" [ref=e197] [cursor=pointer]
+                  - button "避开排队" [ref=e198] [cursor=pointer]
+                  - button "雨天可替换" [ref=e199] [cursor=pointer]
+                  - button "预算克制" [ref=e200] [cursor=pointer]
+                - textbox "例如：每天晚上八点前回酒店" [ref=e201]
+          - generic [ref=e202]:
+            - generic [ref=e203]:
+              - heading "补充说明" [level=3] [ref=e204]
+              - paragraph [ref=e205]: 把同行人特点、必须保留的安排，或不想踩雷的体验补在这里。
+            - generic [ref=e207]:
+              - generic [ref=e208]: 补充说明
+              - textbox "补充说明" [ref=e209]:
+                - /placeholder: 例如：带父母同行，希望每天午后留休息时间；想保留一顿有特色的本地晚餐。
+        - generic [ref=e210]:
+          - strong [ref=e212]: 先填必填项，AI 会自动推导天数并补全路线节奏。
+          - generic [ref=e213]:
+            - button "重置" [ref=e214] [cursor=pointer]
+            - button "生成旅行方案" [ref=e215] [cursor=pointer]:
+              - img [ref=e217]
+              - text: 生成旅行方案

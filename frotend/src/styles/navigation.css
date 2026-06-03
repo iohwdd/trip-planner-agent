@@ -1,0 +1,41 @@
+.nav-card strong,
+.nav-card span {
+  color: var(--text-soft);
+  font-size: 0.88rem;
+}
+
+.nav-card strong {
+  color: var(--text-strong);
+}
+
+.nav-card strong,
+.nav-card span:last-child {
+  grid-column: 2;
+}
+
+.nav-card[data-collapsed="true"] {
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
+  padding: var(--space-5) var(--space-3);
+}
+
+.nav-card[data-collapsed="true"] strong,
+.nav-card[data-collapsed="true"] .nav-card-glyph {
+  grid-column: auto;
+}
+
+.nav-card[data-collapsed="true"] span:last-child {
+  display: none;
+}
+
+.nav-card[data-collapsed="true"] strong {
+  font-size: 0.82rem;
+}
+
+.nav-card:hover,
+.nav-card.is-active {
+  transform: translateY(-2px);
+  border-color: rgba(31, 99, 208, 0.26);
+  background: var(--gradient-nav-active);
+}

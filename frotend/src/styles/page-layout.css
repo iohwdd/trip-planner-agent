@@ -1,0 +1,74 @@
+.app-content {
+  min-height: 0;
+  overflow: auto;
+  padding-right: var(--space-7);
+}
+
+.page-shell {
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
+  gap: var(--space-6);
+  min-height: 100%;
+  
+  /* 添加面板级的毛玻璃拟态效果 */
+  border-radius: var(--radius-3xl);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: var(--gradient-surface-alt);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: var(--shadow-soft);
+  padding: var(--space-6);
+  margin-right: 0;
+}
+
+.page-shell.workspace-page {
+  min-height: 0;
+  display: grid;
+  gap: var(--space-6);
+  overflow: hidden;
+}
+
+.workspace-page {
+  grid-template-rows: auto minmax(0, 1fr);
+  overflow: hidden;
+  height: 100%;
+}
+
+.page-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.8fr);
+  gap: var(--space-7);
+  align-items: start;
+  padding-right: var(--space-2);
+}
+
+.page-header h1 {
+  margin: 10px 0 0;
+  font-size: clamp(1.9rem, 3vw, 3rem);
+  line-height: 1.02;
+}
+
+.page-copy {
+  margin: 0;
+  padding: var(--space-6) var(--space-7);
+  border-radius: var(--radius-2xl);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--border);
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  color: #638bd0;
+}
+
+.workspace {
+  display: grid;
+  gap: var(--space-7);
+  min-height: 0;
+  overflow: hidden;
+}
