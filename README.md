@@ -16,7 +16,7 @@ Trip Planner Agent is now split into two product lines:
 ## Local setup
 
 ### View
-https://img.cdn1.vip/i/6a203fcee2333_1780498382.webp
+<img width="1728" height="911" alt="PixPin_2026-06-03_22-52-00" src="https://github.com/user-attachments/assets/37ee3e2f-67c0-4c4a-8649-e99669c497cc" />
 
 
 
