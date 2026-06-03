@@ -16,8 +16,8 @@ Trip Planner Agent is now split into two product lines:
 ## Local setup
 
 ### View
+![Uploading PixPin_2026-06-03_22-52-00.png…]()
 
-![Uploading image.png…]()
 
 
 ### Backend
