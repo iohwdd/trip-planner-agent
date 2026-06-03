@@ -15,6 +15,11 @@ Trip Planner Agent is now split into two product lines:
 
 ## Local setup
 
+### View
+
+![Uploading image.png…]()
+
+
 ### Backend
 
 1. Use `uv sync` inside `backend/` to install Python dependencies into `.venv`.
